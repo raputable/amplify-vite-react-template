@@ -1,14 +1,9 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - nvm use 20
-        - npm ci --cache .npm --prefer-offline
 frontend:
   phases:
     build:
       commands:
+        - nvm use 20
         - npm run build
   artifacts:
     baseDirectory: build/client
